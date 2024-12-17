@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Selenium IDE Clone",
+  "version": "1.0",
+  "description": "A React-based Selenium IDE Clone",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "webNavigation"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
